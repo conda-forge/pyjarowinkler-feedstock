@@ -10,18 +10,20 @@ source:
   sha256: 49828834eddae6a078ee1329dca572541192a3f49e407608f4063c692c1ef1df
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
   noarch: python
 
 requirements:
   host:
     - pip
-    - python
+    - python {{ python_min }}
   run:
-    - python
+    - python >={{ python_min }}
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - pyjarowinkler
 
