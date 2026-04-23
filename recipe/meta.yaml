@@ -1,5 +1,5 @@
 {% set name = "pyjarowinkler" %}
-{% set version = "1.8" %}
+{% set version = "2.0.0" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 49828834eddae6a078ee1329dca572541192a3f49e407608f4063c692c1ef1df
+  sha256: 230f45bb9612341b74ae283e957dac29e9d088cc03ee8f4f49a4f723d9a85dd3
 
 build:
   number: 0
